@@ -71,10 +71,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tiimeOffsetLabel" destination="cJF-WO-SwX" id="eL1-Jj-fsc"/>
-                                            <outlet property="timeLabel" destination="TfT-Yz-M6e" id="KbR-bC-Yv7"/>
-                                            <outlet property="timePeriodLabel" destination="oWq-wG-INa" id="eM5-C2-NCK"/>
-                                            <outlet property="timezoneLabel" destination="oWq-wG-INa" id="pJ6-72-Q5R"/>
+                                            <outlet property="timeLabel" destination="TfT-Yz-M6e" id="98f-D2-rJW"/>
+                                            <outlet property="timeOffsetLabel" destination="cJF-WO-SwX" id="fJW-OZ-wA9"/>
+                                            <outlet property="timePeriodLabel" destination="oWq-wG-INa" id="khu-6m-XFQ"/>
+                                            <outlet property="timezoneLabel" destination="h72-l0-5bF" id="IBw-0M-DBc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

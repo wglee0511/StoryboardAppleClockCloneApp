@@ -9,7 +9,7 @@ import UIKit
 
 class WorldClockTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var tiimeOffsetLabel: UILabel!
+    @IBOutlet weak var timeOffsetLabel: UILabel!
     @IBOutlet weak var timezoneLabel: UILabel!
     @IBOutlet weak var timePeriodLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!

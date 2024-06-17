@@ -117,6 +117,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결과 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwL-GI-Zql">
+                                <rect key="frame" x="164.66666666666666" y="410.66666666666669" width="64" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DjN-vj-oce">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,6 +161,8 @@
                             <constraint firstItem="DjN-vj-oce" firstAttribute="trailing" secondItem="WdH-5c-FMt" secondAttribute="trailing" id="GvB-sn-1vE"/>
                             <constraint firstItem="DjN-vj-oce" firstAttribute="bottom" secondItem="WdH-5c-FMt" secondAttribute="bottom" id="K7L-tY-tmb"/>
                             <constraint firstItem="DjN-vj-oce" firstAttribute="top" secondItem="TZt-1g-VSg" secondAttribute="top" id="bZc-DT-6RQ"/>
+                            <constraint firstItem="GwL-GI-Zql" firstAttribute="centerX" secondItem="TZt-1g-VSg" secondAttribute="centerX" id="mRB-Z6-ylu"/>
+                            <constraint firstItem="GwL-GI-Zql" firstAttribute="centerY" secondItem="TZt-1g-VSg" secondAttribute="centerY" id="z7V-Zk-ZZA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" prompt="도시 선택" id="Fh1-F8-pHU"/>

@@ -28,18 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-Yz-M6e">
-                                                    <rect key="frame" x="237.33333333333337" y="19.666666666666664" width="135.66666666666663" height="71.666666666666686"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-wG-INa">
-                                                    <rect key="frame" x="156" y="44.333333333333343" width="80" height="40.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Sai-gg-qK8">
                                                     <rect key="frame" x="20" y="37.333333333333329" width="48" height="44.333333333333329"/>
                                                     <subviews>
@@ -57,6 +45,18 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-Yz-M6e">
+                                                    <rect key="frame" x="237.33333333333337" y="19.666666666666664" width="135.66666666666663" height="71.666666666666686"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-wG-INa">
+                                                    <rect key="frame" x="156" y="44.333333333333343" width="80" height="40.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TfT-Yz-M6e" secondAttribute="trailing" id="2a5-65-MBP"/>
@@ -71,9 +71,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="spacingConstraint" destination="2a5-65-MBP" id="ssZ-ug-DWR"/>
                                             <outlet property="timeLabel" destination="TfT-Yz-M6e" id="98f-D2-rJW"/>
                                             <outlet property="timeOffsetLabel" destination="cJF-WO-SwX" id="fJW-OZ-wA9"/>
                                             <outlet property="timePeriodLabel" destination="oWq-wG-INa" id="khu-6m-XFQ"/>
+                                            <outlet property="timeTrailingConstraint" destination="2a5-65-MBP" id="KxQ-7t-as9"/>
                                             <outlet property="timezoneLabel" destination="h72-l0-5bF" id="IBw-0M-DBc"/>
                                         </connections>
                                     </tableViewCell>
@@ -94,7 +96,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="세계 시계" id="229-FY-QTB">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="UJ8-Ra-mFA"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="63C-sL-zJ1">
                             <connections>
                                 <segue destination="eWd-Mn-MXC" kind="presentation" id="GFS-YA-eVm"/>

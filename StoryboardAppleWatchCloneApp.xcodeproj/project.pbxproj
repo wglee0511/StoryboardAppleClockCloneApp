@@ -19,6 +19,7 @@
 		E494F3592C2054B80018C45A /* CitySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F3582C2054B80018C45A /* CitySelectionTableViewCell.swift */; };
 		E494F35C2C2055E60018C45A /* CitySelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F35B2C2055E60018C45A /* CitySelectionModel.swift */; };
 		E494F35E2C2059A10018C45A /* String+Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F35D2C2059A10018C45A /* String+Korean.swift */; };
+		E494F3602C2087AD0018C45A /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F35F2C2087AD0018C45A /* Notification+Name.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E494F3582C2054B80018C45A /* CitySelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewCell.swift; sourceTree = "<group>"; };
 		E494F35B2C2055E60018C45A /* CitySelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionModel.swift; sourceTree = "<group>"; };
 		E494F35D2C2059A10018C45A /* String+Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Korean.swift"; sourceTree = "<group>"; };
+		E494F35F2C2087AD0018C45A /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				E494F3542C1F674F0018C45A /* TimeZone+Util.swift */,
 				E494F35D2C2059A10018C45A /* String+Korean.swift */,
+				E494F35F2C2087AD0018C45A /* Notification+Name.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				E494F3392C1F587E0018C45A /* AppDelegate.swift in Sources */,
 				E494F35C2C2055E60018C45A /* CitySelectionModel.swift in Sources */,
 				E494F33B2C1F587E0018C45A /* SceneDelegate.swift in Sources */,
+				E494F3602C2087AD0018C45A /* Notification+Name.swift in Sources */,
 				E494F3572C2054860018C45A /* CitySelectionViewController.swift in Sources */,
 				E494F3522C1F5F950018C45A /* WorldClockTableViewCell.swift in Sources */,
 				E494F3592C2054B80018C45A /* CitySelectionTableViewCell.swift in Sources */,

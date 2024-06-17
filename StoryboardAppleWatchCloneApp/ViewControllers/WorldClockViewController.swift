@@ -20,6 +20,20 @@ class WorldClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(forName: .ADD_CITY, object: nil, queue: .main) { [weak self] notification in
+            guard let self, let timeZone = notification.userInfo?["timeZone"] as? TimeZone else {
+                return
+            }
+            let isContain = timeZoneList.contains { $0.identifier == timeZone.identifier }
+            
+            if !isContain {
+                timeZoneList
+                    .append(timeZone)
+                
+                
+                worldClockTableView.reloadData()
+            }
+        }
     }
 
 }

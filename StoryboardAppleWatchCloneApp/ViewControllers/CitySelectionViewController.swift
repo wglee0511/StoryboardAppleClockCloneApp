@@ -148,3 +148,17 @@ extension CitySelectionViewController: UITableViewDataSource {
         return tempCities.firstIndex { $0.sectionTitle.uppercased() == title.uppercased() } ?? 0
     }
 }
+
+
+extension CitySelectionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        let targetTimeZone = tempCities[section].items[row].timeZone
+        
+        NotificationCenter.default.post(name: .ADD_CITY, object: nil, userInfo: ["timeZone": targetTimeZone])
+        
+        dismiss(animated: true)
+    }
+}

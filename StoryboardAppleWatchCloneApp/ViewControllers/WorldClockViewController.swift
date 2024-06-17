@@ -9,6 +9,7 @@ import UIKit
 
 class WorldClockViewController: UIViewController {
 
+    var timer: Timer?
     @IBOutlet weak var worldClockTableView: UITableView!
     
     var timeZoneList = [
@@ -43,7 +44,32 @@ class WorldClockViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
+            guard Date().isMinuteChanged, let self else { return }
+            
+            for cell in self.worldClockTableView.visibleCells {
+                guard let clockCell = cell as? WorldClockTableViewCell else { continue }
+                guard let indexPath = self.worldClockTableView.indexPath(for: cell) else { continue }
+                
+                let targetTimeZone = timeZoneList[indexPath.row]
+                
+                clockCell.timeLabel.text = targetTimeZone.currentTime
+                clockCell.timePeriodLabel.text = targetTimeZone.timePeriod
+                clockCell.timeOffsetLabel.text = targetTimeZone.timeOffset
+            }
+        })
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        timer?.invalidate()
+        timer = nil
+    }
 }
 
 extension WorldClockViewController: UITableViewDataSource {

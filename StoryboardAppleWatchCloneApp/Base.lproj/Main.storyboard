@@ -95,7 +95,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="세계 시계" id="229-FY-QTB">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="UJ8-Ra-mFA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="63C-sL-zJ1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="63C-sL-zJ1">
+                            <connections>
+                                <segue destination="eWd-Mn-MXC" kind="presentation" id="GFS-YA-eVm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="worldClockTableView" destination="MNU-9x-JcO" id="Pgi-4h-i1m"/>
@@ -104,6 +108,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Z7-cz-DGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1043.5114503816794" y="541.54929577464793"/>
+        </scene>
+        <!--City Selection View Controller-->
+        <scene sceneID="rVm-dI-tbu">
+            <objects>
+                <viewController id="I8m-gV-bc4" customClass="CitySelectionViewController" customModule="StoryboardAppleWatchCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TZt-1g-VSg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DjN-vj-oce">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitySelectionTableViewCell" textLabel="jOU-iw-j0d" style="IBUITableViewCellStyleDefault" id="2Cv-de-zgV" customClass="CitySelectionTableViewCell" customModule="StoryboardAppleWatchCloneApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cv-de-zgV" id="JDi-WH-z1K">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOU-iw-j0d">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityTextLabel" destination="jOU-iw-j0d" id="5E9-k5-33L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="I8m-gV-bc4" id="tUh-nM-9m1"/>
+                                    <outlet property="delegate" destination="I8m-gV-bc4" id="39b-Pn-pjo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WdH-5c-FMt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DjN-vj-oce" firstAttribute="leading" secondItem="WdH-5c-FMt" secondAttribute="leading" id="5Zv-EL-7Zr"/>
+                            <constraint firstItem="DjN-vj-oce" firstAttribute="trailing" secondItem="WdH-5c-FMt" secondAttribute="trailing" id="GvB-sn-1vE"/>
+                            <constraint firstItem="DjN-vj-oce" firstAttribute="bottom" secondItem="WdH-5c-FMt" secondAttribute="bottom" id="K7L-tY-tmb"/>
+                            <constraint firstItem="DjN-vj-oce" firstAttribute="top" secondItem="TZt-1g-VSg" secondAttribute="top" id="bZc-DT-6RQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="도시 선택" id="Fh1-F8-pHU"/>
+                    <connections>
+                        <outlet property="cityTableView" destination="DjN-vj-oce" id="UaB-9K-n9S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mft-nD-Fgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750.38167938931292" y="541.54929577464793"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qZW-lP-eR0">
@@ -140,6 +201,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saS-mB-fM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1970.2290076335878" y="541.54929577464793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UtO-QP-BbK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWd-Mn-MXC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ics-zV-r7g">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I8m-gV-bc4" kind="relationship" relationship="rootViewController" id="v4R-dg-JWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJH-LG-xqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176.33587786259542" y="541.54929577464793"/>
         </scene>
     </scenes>
     <resources>

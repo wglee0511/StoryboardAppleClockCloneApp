@@ -27,9 +27,9 @@ extension TimeZone {
     
     var city: String? {
         let timeZoneString = "\(self.identifier)"
-        let timeZoneStringList = timeZoneString.split(separator: "/")
+        let city = timeZoneString.components(separatedBy: "/").last
         
-        return "\(timeZoneStringList[1])"
+        return city?.replacingOccurrences(of: "_", with: " ")
     }
     
     var timeOffset: String? {

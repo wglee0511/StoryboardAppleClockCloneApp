@@ -15,6 +15,10 @@
 		E494F34F2C1F5E750018C45A /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F34E2C1F5E750018C45A /* WorldClockViewController.swift */; };
 		E494F3522C1F5F950018C45A /* WorldClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F3512C1F5F950018C45A /* WorldClockTableViewCell.swift */; };
 		E494F3552C1F674F0018C45A /* TimeZone+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F3542C1F674F0018C45A /* TimeZone+Util.swift */; };
+		E494F3572C2054860018C45A /* CitySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F3562C2054860018C45A /* CitySelectionViewController.swift */; };
+		E494F3592C2054B80018C45A /* CitySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F3582C2054B80018C45A /* CitySelectionTableViewCell.swift */; };
+		E494F35C2C2055E60018C45A /* CitySelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F35B2C2055E60018C45A /* CitySelectionModel.swift */; };
+		E494F35E2C2059A10018C45A /* String+Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E494F35D2C2059A10018C45A /* String+Korean.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		E494F34E2C1F5E750018C45A /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
 		E494F3512C1F5F950018C45A /* WorldClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockTableViewCell.swift; sourceTree = "<group>"; };
 		E494F3542C1F674F0018C45A /* TimeZone+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Util.swift"; sourceTree = "<group>"; };
+		E494F3562C2054860018C45A /* CitySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionViewController.swift; sourceTree = "<group>"; };
+		E494F3582C2054B80018C45A /* CitySelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewCell.swift; sourceTree = "<group>"; };
+		E494F35B2C2055E60018C45A /* CitySelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectionModel.swift; sourceTree = "<group>"; };
+		E494F35D2C2059A10018C45A /* String+Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Korean.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		E494F3372C1F587E0018C45A /* StoryboardAppleWatchCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				E494F35A2C2055D40018C45A /* Model */,
 				E494F3532C1F67340018C45A /* Util */,
 				E494F3502C1F5F5F0018C45A /* Components */,
 				E494F34D2C1F5E5C0018C45A /* ViewControllers */,
@@ -79,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E494F34E2C1F5E750018C45A /* WorldClockViewController.swift */,
+				E494F3562C2054860018C45A /* CitySelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -87,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E494F3512C1F5F950018C45A /* WorldClockTableViewCell.swift */,
+				E494F3582C2054B80018C45A /* CitySelectionTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -95,8 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				E494F3542C1F674F0018C45A /* TimeZone+Util.swift */,
+				E494F35D2C2059A10018C45A /* String+Korean.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E494F35A2C2055D40018C45A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E494F35B2C2055E60018C45A /* CitySelectionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +192,13 @@
 			files = (
 				E494F3552C1F674F0018C45A /* TimeZone+Util.swift in Sources */,
 				E494F34F2C1F5E750018C45A /* WorldClockViewController.swift in Sources */,
+				E494F35E2C2059A10018C45A /* String+Korean.swift in Sources */,
 				E494F3392C1F587E0018C45A /* AppDelegate.swift in Sources */,
+				E494F35C2C2055E60018C45A /* CitySelectionModel.swift in Sources */,
 				E494F33B2C1F587E0018C45A /* SceneDelegate.swift in Sources */,
+				E494F3572C2054860018C45A /* CitySelectionViewController.swift in Sources */,
 				E494F3522C1F5F950018C45A /* WorldClockTableViewCell.swift in Sources */,
+				E494F3592C2054B80018C45A /* CitySelectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

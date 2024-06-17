@@ -69,6 +69,12 @@ extension WorldClockViewController: UITableViewDataSource {
             worldClockTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let targetTimeZone = timeZoneList.remove(at: sourceIndexPath.row)
+        
+        timeZoneList.insert(targetTimeZone, at: destinationIndexPath.row)
+    }
 }
 
 extension WorldClockViewController: UITableViewDelegate {
